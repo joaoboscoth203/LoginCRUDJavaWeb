@@ -7,7 +7,7 @@ public class Usuario {
     private String senha;
     private String email;
     private String sexo;
-    private String país;
+    private String pais;
 
     public int getId() {
         return id;
@@ -49,12 +49,12 @@ public class Usuario {
         this.sexo = sexo;
     }
 
-    public String getPaís() {
-        return país;
+    public String getPais() {
+        return pais;
     }
 
-    public void setPais(String país) {
-        this.país = país;
+    public void setPais(String pais) {
+        this.pais = pais;
     }
     
     

@@ -46,7 +46,7 @@ public class UsuarioDAO {
                 usuario.setSenha(rs.getString("senha"));
                 usuario.setEmail(rs.getString("email"));
                 usuario.setSexo(rs.getString("sexo"));
-                usuario.setPais(rs.getString("país"));                       
+                usuario.setPais(rs.getString("pais"));                       
             }
             
         } catch(Exception e) {
@@ -60,13 +60,13 @@ public class UsuarioDAO {
         
         try {
             Connection con = getConnection();
-            PreparedStatement ps = (PreparedStatement) con.prepareStatement("UPDATE usuario SET nome=?, senha=?, email=?, sexo=?, país=? WHERE id=?");
+            PreparedStatement ps = (PreparedStatement) con.prepareStatement("UPDATE usuario SET nome=?, senha=?, email=?, sexo=?, pais=? WHERE id=?");
             
             ps.setString(1, u.getNome());
             ps.setString(2, u.getSenha());
             ps.setString(3, u.getEmail());
             ps.setString(4, u.getSexo());
-            ps.setString(5, u.getPaís());
+            ps.setString(5, u.getPais());
             ps.setInt(6, u.getId());
             status = ps.executeUpdate();         
             
@@ -77,7 +77,7 @@ public class UsuarioDAO {
         }
     
     
-    public static List<Usuario> getAllUsuarios(){
+    public static List<Usuario> getAllUsuario(){
         List<Usuario> list = new ArrayList<Usuario>();
         
         try {
@@ -92,7 +92,7 @@ public class UsuarioDAO {
                 usuario.setSenha(rs.getString("senha"));
                 usuario.setEmail(rs.getString("email"));
                 usuario.setSexo(rs.getString("sexo"));
-                usuario.setPais(rs.getString("país"));
+                usuario.setPais(rs.getString("pais"));
                 list.add(usuario);
                 
                 

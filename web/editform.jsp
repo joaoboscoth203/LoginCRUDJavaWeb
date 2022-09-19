@@ -39,8 +39,8 @@
                     </tr>
                     <tr>
                         <td>Sexo: </td>
-                        <td><input type="radio" name="sexo" value="M>"/>Masculino
-                            <input type="radio" name="sexo" value="F>"/>Feminino
+                        <td><input type="radio" name="sexo" value="M" checked/>Masculino
+                            <input type="radio" name="sexo" value="F"/>Feminino
                         </td>
                     </tr>
                     <tr>
