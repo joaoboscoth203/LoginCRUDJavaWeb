@@ -9,6 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="style.css">
         <title>Edição de Usuário</title>
     </head>
     <body>
@@ -19,7 +20,30 @@
             Usuario usuario = UsuarioDAO.getRegistroById(Integer.parseInt(id));
         %>
         
-        <div align=center>
+        <header>    
+                    <div class="logo">
+                        <img src="img/logo-header-fortaleza.png"class="logo-img">
+                       <a class="acesso-informação" href="http://www.fortaleza.ce.gov.br">Prefeitura de Fortaleza</a>
+                    </div>
+                        
+                        <ul class="mobile-hide">
+                            <li>
+                                <a href="http://acessoainformacao.fortaleza.ce.gov.br/">Acesso à informação</a>
+                            </li>
+                            <li>
+                                <a href="http://transparencia.fortaleza.ce.gov.br/">Transparência</a>
+                            </li>
+                            <li>
+                                <a href="http://catalogodeservicos.fortaleza.ce.gov.br/portal">Serviços</a>
+                            </li>
+                            <li>
+                                <a href="http://legislacao.fortaleza.ce.gov.br/">Legislação</a>
+                            </li>
+                        </ul>
+        </header> 
+        
+        
+        <div class="div1" align=center>
             <h1>Edição do Usuário</h1>
             
             <form action="editusuario.jsp" method="post">

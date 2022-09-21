@@ -15,16 +15,14 @@
     </head>
     <body>
         <%@page import="CrudBean.Usuario, CrudBean.Employee, CrudBean.Branch, java.util.*, DAO.UsuarioDAO, DAO.EmployeeDAO, DAO.BranchDAO"%>
-        <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+        <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>     
         
-        <div class="header">
-            <div id="header-fortaleza">
-                <div class="header-fortaleza">
-                    <a href="http://www.fortaleza.ce.gov.br">
-                        <img class="logo-fortaleza" src="/img/logo-header-fortaleza.png" heigt="24">
-                    </a>
-                    <a class="acesso-informação" href="http://www.fortaleza.ce.gov.br">Prefeitura de Fortaleza</a>
-                    <nav class="navigation-header-fortaleza">
+           
+        <header>    
+                    <div class="logo">
+                        <img src="img/logo-header-fortaleza.png" class="logo-img">
+                       <a class="acesso-informação" href="http://www.fortaleza.ce.gov.br">Prefeitura de Fortaleza</a>
+                    </div>
                         
                         <ul class="mobile-hide">
                             <li>
@@ -40,10 +38,10 @@
                                 <a href="http://legislacao.fortaleza.ce.gov.br/">Legislação</a>
                             </li>
                         </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
+        </header>           
+               
+            
+        
         <div class="conteudo">
             <div class="conteudo-interno">
                 <h1>Lista de usuários</h1>
@@ -53,8 +51,8 @@
                     request.setAttribute("list", list);
                     %>
 
-                    <table class="striped" align="center">
-                        <tr><th>ID</th><th>Nome</th><th>Senha</th><th>Email</th><th>Sexo</th><th>País</th><th>Editar</th><th>Excluir</th></tr>
+                    <table class="bordered striped centered highlight responsive-table" align="center">
+                        <tr><th>ID</th><th>NOME</th><th>SENHA</th><th>EMAIL</th><th>SEXO</th><th>PAÍS</th><th>EDITAR</th><th>EXCLUIR</th></tr>
                         <c:forEach items="${list}" var="usuario">
                             <tr>
                                 <td>${usuario.getId()}</td>
@@ -81,7 +79,7 @@
                     %>
 
                     <table align="center" class="striped">
-                        <tr><th>emp_id</th><th>first_name</th><th>last_name</th><th>birth_date</th><th>Sex</th><th>salary</th><th>super_id</th><th>branch_id</th><th>Editar</th><th>Excluir</th></tr>
+                        <tr><th>EMPLOYEE ID</th><th>FIRST NAME</th><th>LAST NAME</th><th>BIRTH DATE</th><th>SEX</th><th>SALARY</th><th>SUPER ID</th><th>BRANCH ID</th></tr>
                         <c:forEach items="${list2}" var="employee">
                             <tr>
                                 <td>${employee.getEmp_id()}</td>
@@ -91,9 +89,7 @@
                                 <td>${employee.getSex()}</td>
                                 <td>${employee.getSalary()}</td>
                                 <td>${employee.getSuper_id()}</td>
-                                <td>${employee.getBranch_id()}</td>
-                                <td><a href="editform.jsp?id=${employe.getEmp_id()}">Editar</a></td>
-                                <td><a href="#">Excluir</a></td>
+                                <td>${employee.getBranch_id()}</td>                                
                             </tr>
                         </c:forEach>
                     </table>
@@ -110,15 +106,13 @@
                     %>
 
                     <table align="center" class="striped">
-                        <tr><th>branch_id</th><th>branch_name</th><th>mgr_id</th><th>mgr_start_date</th><th>Editar</th><th>Excluir</th></tr>
+                        <tr><th>BRANCH ID</th><th>BRANCH NAME</th><th>MGR ID</th><th>MGR START DATE</th></tr>
                         <c:forEach items="${list3}" var="branch">
                             <tr>
                                 <td>${branch.getBranch_id()}</td>
                                 <td>${branch.getBranch_name()}</td>
                                 <td>${branch.getMgr_id()}</td>
-                                <td>${branch.getMgr_start_date()}</td>                        
-                                <td><a href="editform.jsp?id=${branch.getBranch_id()}">Editar</a></td>
-                                <td><a href="#">Excluir</a></td>
+                                <td>${branch.getMgr_start_date()}</td>
                             </tr>
                         </c:forEach>
                     </table>
