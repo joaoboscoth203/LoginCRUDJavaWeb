@@ -50,7 +50,7 @@ public class LoginServlet extends HttpServlet {
             } else {
                 //wrong username and password
                // System.out.println("Wrong username or password.");
-               response.sendRedirect("erro.html"); 
+               response.sendRedirect("loginfailed.jsp"); 
             }
             
             // close connection

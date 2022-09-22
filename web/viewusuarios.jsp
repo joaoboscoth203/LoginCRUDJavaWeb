@@ -26,6 +26,9 @@
                         
                         <ul class="mobile-hide">
                             <li>
+                                <a href="viewusuarios.jsp">Home</a>
+                            </li>
+                            <li>
                                 <a href="http://acessoainformacao.fortaleza.ce.gov.br/">Acesso à informação</a>
                             </li>
                             <li>
@@ -37,12 +40,15 @@
                             <li>
                                 <a href="http://legislacao.fortaleza.ce.gov.br/">Legislação</a>
                             </li>
+                            <li>
+                                <a href="index.html">Sair</a>
+                            </li>
                         </ul>
         </header>           
                
             
         
-        <div class="conteudo">
+        <div class="conteudo">            
             <div class="conteudo-interno">
                 <h1>Lista de usuários</h1>
                 <div class="div1">                    
@@ -67,7 +73,7 @@
                         </c:forEach>
                     </table>
                     <br>
-                    <a href="#">Adicionar novo Usuário</a>
+                    <a href="addusuarioform.jsp">Adicionar novo Usuário</a>
                 </div>
             </div>
             <div class="conteudo-interno">
@@ -120,7 +126,17 @@
 
                 </div>
             </div>        
-        </div>            
+        </div>
+        <div class="footer">
+            <footer id="footer"><img src="img/footer_amc.png" alt="logo-portal" />
+		<h2 id="autarquia">
+				Autarquia Municipal de Trânsito e Cidadania - AMC <br /> Av.
+				Desembargador Gonzaga, 1630 - Cidade dos Funcionarios - Fortaleza -
+				CE - CEP - 60.823-012 - Tel: +55 (85) 3452.5811
+		</h2>
+            </footer> 
+        </div>
+                           
     </body>
 </html>
 

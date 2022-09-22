@@ -7,18 +7,58 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div align=center>
-            <h1>user Login</h1>
+        <div>
+             <header>    
+                    <div class="logo">
+                        <img src="img/logo-header-fortaleza.png" class="logo-img">
+                       <a class="acesso-informação" href="http://www.fortaleza.ce.gov.br">Prefeitura de Fortaleza</a>
+                    </div>
+                        
+                        <ul class="mobile-hide">                            
+                            <li>
+                                <a href="http://acessoainformacao.fortaleza.ce.gov.br/">Acesso à informação</a>
+                            </li>
+                            <li>
+                                <a href="http://transparencia.fortaleza.ce.gov.br/">Transparência</a>
+                            </li>
+                            <li>
+                                <a href="http://catalogodeservicos.fortaleza.ce.gov.br/portal">Serviços</a>
+                            </li>
+                            <li>
+                                <a href="http://legislacao.fortaleza.ce.gov.br/">Legislação</a>
+                            </li>
+                            
+                        </ul>
+        </header> 
+        </div>
+        
+        
+        <div class="div-login" align=center>
+            <img class="imgAMClogin" src="img/amctransito.png">
+            <img class="prefeituralogin" src="img/logo-prefeitura-fortaleza.png">
+            
+            <h3>Teste de cadastro de usuários</h3>
             <form action=LoginServlet method=post>
-            <table>
-                <tr><td>Enter Name: </td><td><input type=text name="username"/></td></tr>
-                <tr><td>Enter Password: </td><td><input type=password name="password"></td></tr>
-                <tr><td><input type=submit value=Login></td><td><input type=reset></td></tr>
-            </table>            
+            
+                <input class="input-field" placeholder="Usuário" type=text name="username"/>
+                <input class="input-field" placeholder="Senha" type=password name="password">                
+                <input class="button" type=submit value=Login>
+                       
             </form>
         </div>   
+        <div class="footer">
+            <footer id="footer"><img src="img/footer_amc.png" alt="logo-portal" />
+		<h2 id="autarquia">
+				Autarquia Municipal de Trânsito e Cidadania - AMC <br /> Av.
+				Desembargador Gonzaga, 1630 - Cidade dos Funcionarios - Fortaleza -
+				CE - CEP - 60.823-012 - Tel: +55 (85) 3452.5811
+		</h2>
+            </footer> 
+        </div>
     </body>
 </html>
+
